@@ -25,7 +25,8 @@ export default class App extends React.Component<{}, IAppState> {
         const statusLoop = (i = 1) => {
             const request = axios.get(`https://api.github.com/repos/sccp2017/defective-project/pulls?state=closed&per_page=100&page=${i}`);
             request.then((res) => {
-                if (res.data.size !== 0) {
+                console.log(i, res.data, res.data.size);
+                if (res.data.length !== 0) {
                     const tmpPRs = (res.data as Array<any>).reduce((acc, p) => {
                         const user: string = p.user.login;
                         const regex = /s12(4|5).+/;
