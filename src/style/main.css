@@ -1,0 +1,31 @@
+@import url(~sanitize.css/sanitize.css);
+#content {
+    width: 100%;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+}
+
+.subtitle {
+    text-align: center;
+}
+
+.ranking {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.rank-element {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 1px solid #D7DBDD;
+    list-style: none;
+    margin: 0 50px;
+    padding: 5px 0;
+}
